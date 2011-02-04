@@ -1,4 +1,4 @@
-﻿namespace ManagedViewEngine
+﻿namespace ReadModelEngine.Specs.Objects
 {
     public class CustomerCreatedEvent
     {

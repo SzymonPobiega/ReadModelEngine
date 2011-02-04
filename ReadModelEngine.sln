@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadModelEngine", "ReadModelEngine\ReadModelEngine.csproj", "{50B6A601-E36C-4CC3-9D45-28BE40F17173}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadModelEngine.Specs", "ReadModelEngine.Specs\ReadModelEngine.Specs.csproj", "{5DA3CE34-D654-4C78-8BE1-16D538B8CB53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{50B6A601-E36C-4CC3-9D45-28BE40F17173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50B6A601-E36C-4CC3-9D45-28BE40F17173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50B6A601-E36C-4CC3-9D45-28BE40F17173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA3CE34-D654-4C78-8BE1-16D538B8CB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA3CE34-D654-4C78-8BE1-16D538B8CB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA3CE34-D654-4C78-8BE1-16D538B8CB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA3CE34-D654-4C78-8BE1-16D538B8CB53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,6 @@
-﻿namespace ManagedViewEngine
+﻿using ManagedViewEngine;
+
+namespace ReadModelEngine.Specs.Objects
 {
     public class OrderListViewDefinition : ViewDefinition<OrderListView>
     {

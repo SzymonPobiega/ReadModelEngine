@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{50B6A601-E36C-4CC3-9D45-28BE40F17173}</ProjectGuid>
+    <ProjectGuid>{5DA3CE34-D654-4C78-8BE1-16D538B8CB53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ManagedViewEngine</RootNamespace>
-    <AssemblyName>ManagedViewEngine</AssemblyName>
+    <RootNamespace>ReadModelEngine.Specs</RootNamespace>
+    <AssemblyName>ReadModelEngine.Specs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,22 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDenormalizer.cs" />
-    <Compile Include="ISingletonView.cs" />
-    <Compile Include="ISingletonViewUpdater.cs" />
-    <Compile Include="IView.cs" />
-    <Compile Include="IViewEngine.cs" />
-    <Compile Include="IViewId.cs" />
-    <Compile Include="IViewUpdater.cs" />
+    <Compile Include="Objects\CustomerCreatedEvent.cs" />
+    <Compile Include="Objects\CustomerDetailsView.cs" />
+    <Compile Include="Objects\CustomerListView.cs" />
+    <Compile Include="Objects\CustomerListViewDefinition.cs" />
+    <Compile Include="Objects\OrderListView.cs" />
+    <Compile Include="Objects\OrderListViewDefinition.cs" />
+    <Compile Include="Objects\SalesSummaryView.cs" />
+    <Compile Include="Objects\SalesSummaryViewDefinition.cs" />
+    <Compile Include="Objects\SalesSummaryViewDenormalizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingletonViewDefinition.cs" />
-    <Compile Include="ViewData.cs" />
-    <Compile Include="ViewDefinition.cs" />
-    <Compile Include="ViewMetadata.cs" />
-    <Compile Include="ViewStatus.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SqlPersistence\" />
+    <ProjectReference Include="..\ReadModelEngine\ReadModelEngine.csproj">
+      <Project>{50B6A601-E36C-4CC3-9D45-28BE40F17173}</Project>
+      <Name>ReadModelEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
