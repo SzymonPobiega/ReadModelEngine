@@ -6,7 +6,6 @@ namespace ReadModelEngine.Specs.Objects
     {
         public CustomerListViewDefinition()
         {
-            Id(x => x.Name);
         }
     }
 }

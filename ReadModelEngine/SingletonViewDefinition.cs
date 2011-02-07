@@ -1,6 +1,6 @@
 ﻿namespace ManagedViewEngine
 {
-    public class SingletonViewDefinition<TView>
+    public abstract class SingletonViewDefinition<TView>
     {
     }
 }

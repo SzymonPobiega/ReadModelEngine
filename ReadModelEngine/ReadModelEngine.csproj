@@ -32,7 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistence\Constraint.cs" />
+    <Compile Include="Persistence\IViewPersistanceEngine.cs" />
     <Compile Include="IDenormalizer.cs" />
     <Compile Include="ISingletonView.cs" />
     <Compile Include="ISingletonViewUpdater.cs" />
@@ -47,15 +52,43 @@
     <Compile Include="IViewEngine.cs" />
     <Compile Include="IViewId.cs" />
     <Compile Include="IViewUpdater.cs" />
+    <Compile Include="Persistence\Ordering.cs" />
+    <Compile Include="Persistence\Sql\ConfigurationConnectionFactory.cs" />
+    <Compile Include="Persistence\Sql\DelegateConnectionFactory.cs" />
+    <Compile Include="Persistence\Sql\Dialects\CommonDbStatement.cs" />
+    <Compile Include="Persistence\Sql\Dialects\CommonSqlDialect.cs" />
+    <Compile Include="Persistence\Sql\Dialects\ExtensionMethods.cs" />
+    <Compile Include="Persistence\Sql\Dialects\MsSqlDialect.cs" />
+    <Compile Include="Persistence\Sql\Dialects\MsSqlStatements.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsSqlStatements.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Sql\DisposableEnumeration.cs" />
+    <Compile Include="Persistence\Sql\IConnectionFactory.cs" />
+    <Compile Include="Persistence\Sql\IDbStatement.cs" />
+    <Compile Include="Persistence\Sql\ISqlDialect.cs" />
+    <Compile Include="Persistence\Sql\SqlViewPersistanceEngine.cs" />
+    <Compile Include="Persistence\StorageException.cs" />
+    <Compile Include="Persistence\ViewItemData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingletonViewDefinition.cs" />
+    <Compile Include="InvalidViewDefinitionException.cs" />
+    <Compile Include="SingletonView.cs" />
+    <Compile Include="View.cs" />
+    <Compile Include="StoredViewDifinition.cs" />
+    <Compile Include="ViewEngine.cs" />
+    <Compile Include="ViewNotFoundException.cs" />
     <Compile Include="ViewData.cs" />
     <Compile Include="ViewDefinition.cs" />
     <Compile Include="ViewMetadata.cs" />
     <Compile Include="ViewStatus.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SqlPersistence\" />
+    <EmbeddedResource Include="Persistence\Sql\Dialects\MsSqlStatements.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsSqlStatements.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

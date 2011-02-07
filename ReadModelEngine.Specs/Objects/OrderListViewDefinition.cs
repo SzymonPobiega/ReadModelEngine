@@ -6,7 +6,6 @@ namespace ReadModelEngine.Specs.Objects
     {
         public OrderListViewDefinition()
         {
-            Id(x => x.Id);
             Share(x => x.CustomerName);
         }
     }
